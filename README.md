@@ -1,18 +1,15 @@
-## Sensu-Plugins-disk-checks
+## Sensu-Plugins-dhcp
 
-[![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-dhcp.svg?branch=master)][1]
-[![Gem Version](https://badge.fury.io/rb/sensu-plugins-dhcp.svg)][2]
-[![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-dhcp/badges/gpa.svg)][3]
-[![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-dhcp/badges/coverage.svg)][4]
-[![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-dhcp.svg)][5]
+[![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-dhcp.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-dhcp)
+[![Gem Version](https://badge.fury.io/rb/sensu-plugins-dhcp.svg)](http://badge.fury.io/rb/sensu-plugins-dhcp)
+[![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-dhcp/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-dhcp)
+[![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-dhcp/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-dhcp)
+[![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-dhcp.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-dhcp)
 
 ## Functionality
 
 ## Files
- *
- *
- *
- *
+ * bin/check-dhcp
 
 ## Usage
 
@@ -41,7 +38,7 @@ Using the Sensu **sensu_gem** LWRP
 ```
 sensu_gem 'sensu-plugins-dhcp' do
   options('--prerelease')
-  version '0.0.1.alpha.4'
+  version '0.0.1'
 end
 ```
 
@@ -49,14 +46,8 @@ Using the Chef **gem_package** resource
 ```
 gem_package 'sensu-plugins-dhcp' do
   options('--prerelease')
-  version '0.0.1.alpha.4'
+  version '0.0.1'
 end
 ```
 
 ## Notes
-
-[1]:[https://travis-ci.org/sensu-plugins/sensu-plugins-dhcp]
-[2]:[http://badge.fury.io/rb/sensu-plugins-dhcp]
-[3]:[https://codeclimate.com/github/sensu-plugins/sensu-plugins-dhcp]
-[4]:[https://codeclimate.com/github/sensu-plugins/sensu-plugins-dhcp]
-[5]:[https://gemnasium.com/sensu-plugins/sensu-plugins-dhcp]
