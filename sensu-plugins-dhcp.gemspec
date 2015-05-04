@@ -1,6 +1,5 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-
 require 'date'
 
 if RUBY_VERSION < '2.0.0'
@@ -12,9 +11,9 @@ end
 pvt_key = '~/.ssh/gem-private_key.pem'
 
 Gem::Specification.new do |s|
+  s.authors                = ['Sensu-Plugins and contributors']
   s.name                   = 'sensu-plugins-dhcp'
   s.version                = SensuPluginsDhcp::VERSION
-  s.authors                = ['Yieldbot, Inc. and contributors']
   s.email                  = '<sensu-users@googlegroups.com>'
   s.homepage               = 'https://github.com/sensu-plugins/sensu-plugins-dhcp'
   s.summary                = ''
@@ -27,16 +26,17 @@ Gem::Specification.new do |s|
   s.require_paths          = ['lib']
   s.cert_chain             = ['certs/sensu-plugins.pem']
   s.signing_key            = File.expand_path(pvt_key) if $PROGRAM_NAME =~ /gem\z/
-  s.platform               = ruby
+  s.platform               = Gem::Platform::RUBY
   s.required_ruby_version  = '>= 1.9.3'
+  s.add_runtime_dependency 'sensu-plugin',      '1.1.0'
 
-  s.add_development_dependency 'codeclimate-test-reporter', '~> 0.4.6'
-  s.add_development_dependency 'rubocop', '~> 0.17.0'
+  s.add_development_dependency 'codeclimate-test-reporter', '~> 0.4'
+  s.add_development_dependency 'rubocop', '~> 0.30.0'
   s.add_development_dependency 'rspec', '~> 3.1'
   s.add_development_dependency 'bundler', '~> 1.7'
   s.add_development_dependency 'rake', '~> 10.0'
-  s.add_development_dependency 'github-markup', '1.3.3'
-  s.add_development_dependency 'redcarpet', '~> 3.2.2'
-  s.add_development_dependency 'yard', '~> 0.8.7.6'
-  s.add_development_dependency 'pry', '~> 0.10.1'
+  s.add_development_dependency 'github-markup', ' ~> 1.3'
+  s.add_development_dependency 'redcarpet', '~> 3.2'
+  s.add_development_dependency 'yard', '~> 0.8'
+  s.add_development_dependency 'pry', '~> 0.10'
 end
