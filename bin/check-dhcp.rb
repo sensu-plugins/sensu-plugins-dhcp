@@ -43,6 +43,9 @@ require 'net/dhcp'
 require 'ipaddr'
 require 'socket'
 
+#
+# Check DHCP
+#
 class CheckDHCP < Sensu::Plugin::Check::CLI
   option :server,
          description: 'IP address of DHCP Server - will use unicast',
