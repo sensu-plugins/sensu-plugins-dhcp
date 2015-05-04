@@ -9,7 +9,7 @@
 ## Functionality
 
 ## Files
- * bin/check-dhcp
+ * bin/check-dhcp.rb
 
 ## Usage
 
