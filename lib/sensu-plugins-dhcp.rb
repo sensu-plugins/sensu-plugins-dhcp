@@ -5,7 +5,7 @@ require 'sensu-plugins-dhcp/version'
 #
 # Default class
 #
-module SensuPluginsDhcp
+module SensuPluginsDHCP
   class << self
   end
 
