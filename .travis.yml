@@ -11,11 +11,7 @@ rvm:
 notifications:
   email:
     recipients:
-<<<<<<< HEAD
-      - sensu-plugin@sensu-plugin.io
-=======
       - sensu-plugin@sensu-plugins.io
->>>>>>> update repo
     on_success: change
     on_failure: always
 
