@@ -24,7 +24,6 @@
 # DEPENDENCIES:
 #   gem: sensu-plugin
 #   gem: net-dhcp
-#   gem: socket
 #   gem: ipaddr
 #
 # USAGE:
