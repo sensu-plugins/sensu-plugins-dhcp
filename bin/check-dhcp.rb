@@ -74,7 +74,7 @@ class CheckDHCP < Sensu::Plugin::Check::CLI
          long: '--debug',
          boolean: true
 
-  def dhcp_discover # rubocop:disable all
+  def dhcp_discover
     request = DHCP::Discover.new
 
     listensock = UDPSocket.new
@@ -105,7 +105,7 @@ class CheckDHCP < Sensu::Plugin::Check::CLI
     end
 
     # #YELLOW
-    if config[:debug] # rubocop:disable IfUnlessModifier
+    if config[:debug]
       puts request
     end
 
@@ -132,7 +132,7 @@ class CheckDHCP < Sensu::Plugin::Check::CLI
     DHCP::Message.from_udp_payload(data[0])
   end
 
-  def run # rubocop:disable all
+  def run
     response = dhcp_discover
     if response
       puts response if config[:debug]
