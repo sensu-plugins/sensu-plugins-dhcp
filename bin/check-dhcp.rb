@@ -157,7 +157,7 @@ class CheckDHCP < Sensu::Plugin::Check::CLI
         end
       else
         # Is response a DHCP message?
-        if response.is_a?(DHCP::Message)
+        if response.is_a?(DHCP::Message) # rubocop:disable Style/IfInsideElse
           ok 'Received DHCP response'
         else
           critical "Message received from #{config[:server]} not a valid DHCP response"
