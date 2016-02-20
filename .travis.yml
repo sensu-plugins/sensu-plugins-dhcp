@@ -1,19 +1,33 @@
 language: ruby
 cache:
-  - bundler
+- bundler
 install:
-  - bundle install
+- bundle install
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2
 notifications:
   email:
     recipients:
-      - sensu-plugin@sensu-plugins.io
+    - sensu-plugin@sensu-plugins.io
     on_success: change
     on_failure: always
-
 script:
-  - 'bundle exec rake default'
+- bundle exec rake default
+- gem build sensu-plugins-dhcp.gemspec
+- gem install sensu-plugins-dhcp-*.gem
+deploy:
+  provider: rubygems
+  api_key:
+    secure: P+nH5bkecGc+5PEZ8RTuul1lAV0Ukeni2ubT/EY/TJrvvHmGWC9qTh9/wRSIP1joVrsZQNfbyR1b+PqSnhYDFeb8xz5I5XwAw7O0LG2W+BIQq96zObx9IBEbmtW+uC97lMnL8ggUkRKTGK6aPn9U/XVBHA6gVd/AYudOx2U0pCA=
+  gem: sensu-plugins-dhcp
+  on:
+    tags: true
+    all_branches: true
+    rvm: 1.9.3
+    rvm: 2.0
+    rvm: 2.1
+    rvm: 2.2
+    repo: sensu-plugins/sensu-plugins-dhcp
