@@ -1,6 +1,6 @@
 ## Sensu-Plugins-dhcp
 
-[ ![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-dhcp.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-dhcp)
+[![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-dhcp.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-dhcp)
 [![Gem Version](https://badge.fury.io/rb/sensu-plugins-dhcp.svg)](http://badge.fury.io/rb/sensu-plugins-dhcp)
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-dhcp/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-dhcp)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-dhcp/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-dhcp)
